@@ -1,0 +1,12 @@
+<resources>
+
+    <string name="app_name">Lab3</string>
+
+    <string name="button_samba">Samba</string>
+    <string name="button_rock_n_roll">Rock/n/Roll</string>
+    <string name="button_hip_hop">Hip Hop</string>
+
+    <string name="image_description">Lab3 Image</string>
+    </resources>
+
+
