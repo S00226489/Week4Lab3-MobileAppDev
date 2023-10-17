@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,50 +11,109 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="237dp"
+        android:layout_width="225dp"
         android:layout_height="278dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/lab3img"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:contentDescription="@string/image_description" />
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lab3img" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-black"
         android:text="Feet4Movin"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@id/imageView"
-        app:layout_constraintTop_toTopOf="@id/imageView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/subtitle"
-        android:layout_width="135dp"
-        android:layout_height="74dp"
-        android:layout_gravity="center"
-        android:fontFamily="sans-serif"
-        android:text="An app to get you Movin"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="121dp" />
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="An"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="app"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/subtitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="to"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/subtitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="get"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/subtitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="you"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/subtitle6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="Movin"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/chooseDanceStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose Your Dance Style"
+        android:text="@string/choose_your_dance_style"
         android:textSize="22sp"
         android:fontFamily="sans-serif-black"
         app:layout_constraintTop_toBottomOf="@id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <LinearLayout
         android:id="@+id/buttonContainer"
@@ -64,36 +124,39 @@
         app:layout_constraintTop_toBottomOf="@id/chooseDanceStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp">
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp">
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_samba"
-            android:onClick="displayToast"
+            android:layout_margin="8dp"
             android:background="@color/pink_purple"
-            android:layout_margin="8dp"/>
+            android:onClick="displayToast"
+            android:text="@string/button_samba"
+            android:textColor="#212121" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_rock_n_roll"
-            android:onClick="displayToast"
+            android:layout_margin="8dp"
             android:background="@color/pink_purple"
-            android:layout_margin="8dp"/>
+            android:onClick="displayToast"
+            android:text="@string/button_rock_n_roll"
+            android:textColor="#212121" />
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_hip_hop"
-            android:onClick="displayToast"
+            android:layout_margin="8dp"
             android:background="@color/pink_purple"
-            android:layout_margin="8dp"/>
+            android:onClick="displayToast"
+            android:text="@string/button_hip_hop"
+            android:textColor="#212121" />
 
     </LinearLayout>
 
